@@ -34,6 +34,17 @@ A web application that takes a number from the user and returns a list of values
 ## Tests
 ```
 
+Description: translateCode()
+
+Test: "It should return an array of numbers based counting from 0 up to the user's inputted number."
+Code: translateCode(5);
+Expected Output:  [0,1,2,3,4,5]
+
+Test: "Replace number 1 with 'Beep!', number 2 with 'Boop!' and number 3 with 'Won't you be my neighbor?' in the resulting array"
+Code: translateCode(5);
+Expected Output:  [0,'Beep!','Boop!', 'Won't you be my neighbor?', 3,4,5]
+
+
 ```
 
 ## License
