@@ -1,3 +1,5 @@
+//Business Logic
+
 function translateCode(code) {
   numbers = []
   for(i = 0; i <= code; i++) {
@@ -12,6 +14,14 @@ function translateCode(code) {
     }
     numbers.push(i);
   }
-  return numbers;
 
+  numbers.forEach(function(number) {
+    
+  });
+  return numbers;
 }
+
+function compareDigits(number) {
+  return String(number).split('').map(Number);
+}
+

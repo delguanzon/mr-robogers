@@ -44,6 +44,19 @@ Test: "Replace number 1 with 'Beep!', number 2 with 'Boop!' and number 3 with 'W
 Code: translateCode(5);
 Expected Output:  [0,'Beep!','Boop!', 'Won't you be my neighbor?', 3,4,5]
 
+Test: "Replace number 1 with 'Beep!', number 2 with 'Boop!' and number 3 with 'Won't you be my neighbor?' in the resulting array"
+Code: translateCode(5);
+Expected Output:  [0,'Beep!','Boop!', 'Won't you be my neighbor?', 3,4,5]
+
+Test: "Display hierarch of substition for the out"
+Code: translateCode(5);
+Expected Output:  [0,'Beep!','Boop!', 'Won't you be my neighbor?', 3,4,5]
+
+Description: compareDigits()
+
+Test: "It should return an array of the digits from the user's inputted number"
+Code: compareDigits(123);
+Expected Output: [1,2,3];
 
 ```
 
