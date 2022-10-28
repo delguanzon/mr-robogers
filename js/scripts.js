@@ -41,3 +41,19 @@ function generateDialog(number) {
   }
   return dialog.join(', ');
 }
+
+
+//UI Logic
+
+function displayDialog(event){
+  event.preventDefault();
+  let p = document.createElement("p");
+  let code = parseInt(document.getElementById("code").value);
+  p.append(generateDialog(code));
+  form.after(p);
+};
+
+window.addEventListener("load", function() {
+  const form = document.getElementById("form");
+  form.addEventListener("submit", displayDialog);
+});
