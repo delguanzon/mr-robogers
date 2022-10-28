@@ -70,6 +70,10 @@ Test: "It should look for the numbers 1,2 and 3 in the array of digits"
 Code: compareDigits(9123);
 Expected Output: [1,2,3];
 
+Test: "It should look for the numbers 1,2 and 3 in the array of digits"
+Code: compareDigits(9123);
+Expected Output: [1,2,3];
+
 ```
 
 ## License
