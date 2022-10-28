@@ -1,29 +1,45 @@
 //Business Logic
 
-function translateCode(code) {
-  numbers = []
-  for(i = 0; i <= code; i++) {
-    if(i === 1) {
-      numbers.push('Beep')
+function translateCode(code) {  
+    if(code === 1) {
+      return 'Beep';
     }
-    if(i === 2) {
-      numbers.push('Boop')
+    if(code === 2) {
+      return 'Boop';
     }
-    if(i === 3) {
-      numbers.push('Won\'t you be my neighbor?')
+    if(code === 3) {
+      return 'Won\'t you be my neighbor?';
     }
-    numbers.push(i);
+    return code;
   }
-
-  numbers.forEach(function(number) {
-    
-  });
-  return numbers;
-}
 
 function compareDigits(number) {
   const numbers = String(number).split('').map(Number);
   let numLookUp = String(number).match(/[1-3]/g);
-  return numLookUp.sort().map(Number)[numLookUp.length-1];
+  if (numLookUp) {
+    return numLookUp.sort().map(Number)[numLookUp.length-1];
+  }
+  return number;
 }
 
+
+
+function generateDialog(number) {
+
+  let timeOut = false;
+  setTimeout( function() {
+    timeOut = true;
+  }, 5000);
+
+  let dialog = [];
+  for(i = 0; i <= number ; i++){
+    if (timeOut) {
+      return "Can't understand code! Too long to process *Static Noise*";
+    } 
+    if(i > 9) {
+      dialog.push(translateCode(compareDigits(i)));
+    }
+    else dialog.push(translateCode(i));
+  }
+  return dialog.join(", ");
+}

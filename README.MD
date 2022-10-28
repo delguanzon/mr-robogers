@@ -74,6 +74,11 @@ Test: "It should look for the numbers 1,2 and 3 in the array of digits"
 Code: compareDigits(9123);
 Expected Output: [1,2,3];
 
+Description: generateDialog()
+Test: "Displays dialog based on translated code"
+Code: generateDialog(5);
+Expected Output: "0, Beep!, Boop!, Won't you be my neighbor?, 4, 5"
+
 ```
 
 ## License
