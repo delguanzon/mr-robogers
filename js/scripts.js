@@ -22,10 +22,7 @@ function compareDigits(number) {
   return number;
 }
 
-
-
 function generateDialog(number) {
-
   let timeOut = false;
   setTimeout( function() {
     timeOut = true;
@@ -33,13 +30,14 @@ function generateDialog(number) {
 
   let dialog = [];
   for(i = 0; i <= number ; i++){
-    if (timeOut) {
-      return "Can't understand code! Too long to process *Static Noise*";
+    if (i >= 200 ) {
+      dialog.push('*COUGH* *COUGH* *Static Noise*');
+      return dialog.join(', ');
     } 
     if(i > 9) {
       dialog.push(translateCode(compareDigits(i)));
     }
     else dialog.push(translateCode(i));
   }
-  return dialog.join(", ");
+  return dialog.join(', ');
 }
