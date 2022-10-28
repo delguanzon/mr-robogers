@@ -1,0 +1,104 @@
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 64);
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  padding-bottom: 5px;
+  caret-color: rgb(0, 255, 64);
+  width: 1100px;
+  margin: auto;
+  border: solid rgb(0, 255, 64);
+}
+
+#footer {
+  width: 1100px;
+  display: inline;
+  text-align: center;
+  margin-top: 100px;
+  bottom: 0;
+}
+.form {
+  width: 500px;
+}
+
+.field {
+  color: rgb(0, 255, 64);
+  background: black;
+  border: 1px solid rgb(0, 255, 64);
+}
+
+input[type="number"].field{
+  width: 40px;
+}
+
+input[type='radio'] {
+  position: absolute;
+  opacity: 00;
+}
+
+.select {
+  display: inline;  
+  padding-right: 5px;
+  float: left;
+  opacity: 0;
+}
+
+label:hover .select{
+  display: inline;
+  opacity: 100;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+input:checked~.select {
+  opacity: 100;
+}
+
+#ansDiv {
+  text-align: center;
+  margin: auto;
+}
+img {
+  width: 200px
+}
+
+a {
+  color: rgb(0, 255, 64);
+  transition: 0.3s;
+  
+}
+a:visited {
+  color: rgb(0, 255, 64);
+}
+
+a:hover {
+  cursor: pointer;
+  font-size:large;
+  color: rgb(255, 255, 255);
+}
+
+button {
+  background-color: black;
+  border: solid rgb(0, 255, 64) 1px;
+  color: rgb(0, 255, 64);
+  margin-top: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: large;
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  width: 300px;
+  text-align: justify;
+}
