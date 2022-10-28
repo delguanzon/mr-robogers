@@ -23,7 +23,9 @@ function translateCode(code) {
 
 function compareDigits(number) {
   const numbers = String(number).split('').map(Number);
+  numbers.sort()[numbers.length-1];
+  let numLookUp = String(number).match(/[1-3]/g);
 
-  return numbers.sort()[numbers.length];
+  return numLookUp.sort().map(Number);
 }
 
