@@ -58,6 +58,10 @@ Test: "It should return an array of the digits from the user's inputted number"
 Code: compareDigits(123);
 Expected Output: [1,2,3];
 
+Test: "It should return the highest digit from the digits of the user's inputted number"
+Code: compareDigits(123);
+Expected Output: [3];
+
 ```
 
 ## License

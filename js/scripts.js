@@ -22,6 +22,8 @@ function translateCode(code) {
 }
 
 function compareDigits(number) {
-  return String(number).split('').map(Number);
+  const numbers = String(number).split('').map(Number);
+
+  return numbers.sort()[numbers.length];
 }
 
