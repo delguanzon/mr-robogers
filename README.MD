@@ -54,13 +54,21 @@ Expected Output:  [0,'Beep!','Boop!', 'Won't you be my neighbor?', 3,4,5]
 
 Description: compareDigits()
 
-Test: "It should return an array of the digits from the user's inputted number"
+Test: "It should return an array of the digits from the number"
 Code: compareDigits(123);
 Expected Output: [1,2,3];
 
-Test: "It should return the highest digit from the digits of the user's inputted number"
+Test: "It should return the highest digit from the digits of the number"
 Code: compareDigits(123);
 Expected Output: [3];
+
+Test: "It should return the highest digit from the digits of the number"
+Code: compareDigits(9123);
+Expected Output: [9];
+
+Test: "It should look for the numbers 1,2 and 3 in the array of digits"
+Code: compareDigits(9123);
+Expected Output: [1,2,3];
 
 ```
 
