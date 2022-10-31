@@ -2,13 +2,13 @@
 
 function translateCode(code) {  
     if(code === 1) {
-      return ' Beep';
+      return 'Beep';
     }
     if(code === 2) {
-      return ' Boop';
+      return 'Boop';
     }
     if(code === 3) {
-      return ' Won\'t you be my neighbor?';
+      return 'Won\'t you be my neighbor?';
     }
     return code;
   }
@@ -57,13 +57,23 @@ function displayDialog(event){
   generateDialog(code).forEach(function (element) {
     let span = document.createElement("span");
     span.append(element);
-    responseDiv.append(span);
+    p.append(span);
   });
   //p.append(generateDialog(code));
-  //responseDiv.replaceChildren(p);
+  responseDiv.replaceChildren(p);
 };
+
+function hideForm(event) {
+  event.preventDefault();
+  const welcome = document.getElementById("welcome");
+  const chatBox = document.getElementById("chatBox");
+  welcome.style.display = "none";
+  chatBox.style.display = "flex";
+}
 
 window.addEventListener("load", function() {
   const form = document.getElementById("form");
+  const nameBtn = document.getElementById("nameBtn");
+  nameBtn.addEventListener("click", hideForm);
   form.addEventListener("submit", displayDialog);
 });

@@ -14,11 +14,15 @@ body {
   /* border: solid rgb(44, 44, 44); */
 }
 
-.chatBox {
+.hidden {
+  display: none;
+}
+
+#chatBox {
   width: 700px;
   border: 1px solid black;
   height: 500px;
-  display: flex;
+  /* display: flex; */
   flex-flow: column;
   background-color: rgba(255, 255, 255, 0.74);
   margin: 100px auto;
@@ -29,6 +33,8 @@ body {
   height: 470px;
   overflow:auto;
   padding: 20px;
+  display: flex;
+  justify-content: center;
 
 }
 
@@ -37,6 +43,7 @@ body {
   margin: 10px;
   display: flex;
   align-items: center;
+  align-content: center;
   border: 1px solid black;
 }
 
@@ -68,18 +75,36 @@ button:hover {
 
 span {
   transition: 1s;
+  margin: 1%;
 }
 span:hover {
-  text-shadow: 5px 5px 5px rgb(14, 14, 14);
+  text-shadow: 2px 2px 5px rgb(230, 255, 5);
   transition: 0.1s;
-  cursor: pointer;
+  cursor: default;
   font-weight: bold;
+  font-size: 20px;
 }
 
-.hidden {
-  display: none;
-}
+
 
 p {
-  text-align: justify;
+  text-align: center;
+}
+
+.centerDiv {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 1000;
+  left: 0px;
+  display: flex;
+}
+
+#nameForm {
+  color: rgb(240, 240, 240);
+  text-shadow: 0px 0px 10px rgb(231, 231, 231) ;
+  margin: auto;
+  font-size: 50px;
+  text-align: center;
 }

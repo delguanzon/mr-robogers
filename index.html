@@ -9,15 +9,15 @@
   <link rel="stylesheet" href="./css/styles.css" type="text/css">
 </head>
 <body>
-  <div class="centerDiv">
+  <div class="centerDiv" id="welcome">
     <form id="nameForm">
       <label for="name">Hello! What's your name?</label><br>
       <input type="input" id="name" autocomplete="off" required="true" />
-      <button type="submit" id="button">Enter</button>
+      <button type="submit" id="nameBtn">Enter</button>
     </form>
   </div>
 
-  <div class="chatBox">
+  <div class="hidden" id="chatBox">
     <div id="resBox">
       <p>response</p>
     </div>
