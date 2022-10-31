@@ -48,9 +48,10 @@ function generateDialog(number) {
 function displayDialog(event){
   event.preventDefault();
   let p = document.createElement("p");
+  let responseDiv = document.getElementById("resBox");  
   let code = parseInt(document.getElementById("code").value);
   p.append(generateDialog(code));
-  form.after(p);
+  responseDiv.replaceChildren(p);
 };
 
 window.addEventListener("load", function() {
