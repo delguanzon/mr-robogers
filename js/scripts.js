@@ -47,10 +47,11 @@ function generateDialog(number) {
 
 //UI Logic
 
-function displayDialog(event){
+function displayDialog(event, ){
   event.preventDefault();
-  let p = document.createElement("p");
-  
+
+  const name = document.getElementById("name").value;
+  let p = document.createElement("p");  
   let responseDiv = document.getElementById("resBox");  
   let code = parseInt(document.getElementById("code").value);
 
@@ -65,10 +66,17 @@ function displayDialog(event){
 
 function hideForm(event) {
   event.preventDefault();
+  const p = document.getElementById("welcomePg"); 
+  const name = document.getElementById("name").value.trim().split(" ")[0];
   const welcome = document.getElementById("welcome");
   const chatBox = document.getElementById("chatBox");
-  welcome.style.display = "none";
-  chatBox.style.display = "flex";
+  welcome.setAttribute("class","hidden");
+  chatBox.setAttribute("class","chatBox");
+  if(name.length > 0) {
+    let newName = " " + name + "!";
+    p.append(newName);
+  }
+  
 }
 
 window.addEventListener("load", function() {
