@@ -44,6 +44,12 @@ Test: "Replace number 1 with 'Beep!', number 2 with 'Boop!' and number 3 with 'W
 Code: translateCode(5);
 Expected Output:  [0,'Beep!','Boop!', 'Won't you be my neighbor?', 3,4,5]
 
+Test: "It should display user's name after Won't you be my neighbor if available"
+Code: translateCode(5);
+Expected Output:  [0,'Beep!','Boop!', 'Won't you be my neighbor, firstName?', 3,4,5]
+
+
+
 Description: compareDigits()
 
 Test: "It should return an array of the digits from the number"
