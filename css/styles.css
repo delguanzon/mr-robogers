@@ -181,3 +181,13 @@ input#name:focus {
   text-shadow: 0px 0px 10px white;
   font-family: 'Courier New', Courier, monospace;
 }
+
+#imgBox {
+  overflow: visible;
+  position: absolute;
+  z-index: 0;
+}
+.move {
+  margin-left: -110px;
+  
+}
