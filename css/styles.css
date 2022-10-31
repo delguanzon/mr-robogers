@@ -67,11 +67,42 @@ button {
   margin-left: 5px;
 }
 
-button:hover {
+#button:hover {
   cursor: pointer;
   transition: 0.1s;
   font-size: large;
 }
+
+button#nameBtn {
+  background-color: black;  
+  border: none;
+  color: white;
+  text-shadow: 0px 0px 10px white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 100px;
+  transition: 0.3s;
+}
+
+button#nameBtn:hover {
+  font-size: 150px;;
+  cursor: pointer;
+  transition: 0.3s;  
+}
+
+button#nameBtn:hover ~ label {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+button#nameBtn:hover ~ input#name {
+  font-size: 80px;
+  height: 80px;
+  width: auto;
+  border: none;
+  box-shadow: none;
+  transition: 1s;
+}
+
 
 span {
   transition: 1s;
@@ -84,8 +115,6 @@ span:hover {
   font-weight: bold;
   font-size: 20px;
 }
-
-
 
 p {
   text-align: center;
@@ -107,4 +136,22 @@ p {
   margin: auto;
   font-size: 50px;
   text-align: center;
+}
+
+input#name {  
+  height: 30px;
+  width: 500px;
+  text-align: center;
+  caret-color: rgb(255, 255, 255);
+  font-size: 20px;
+
+}
+
+.whiteGlow {
+  background-color: black;
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px white;  
+  color: white;
+  text-shadow: 0px 0px 10px white;
+  font-family: 'Courier New', Courier, monospace;
 }
