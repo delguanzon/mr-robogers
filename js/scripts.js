@@ -33,7 +33,7 @@ function generateDialog(number) {
   }, 5000);
 
   let dialog = [];
-  for(i = 0; i <= number ; i++){
+  for(i = 0; i <= number ; i++) {
     if (i >= 200 ) {
       dialog.push(' *COUGH* *COUGH* *Static Noise* ');
       // return dialog.join(' ');
@@ -48,12 +48,27 @@ function generateDialog(number) {
   return dialog;
 }
 
-
 //UI Logic
 
-function displayDialog(event, ){
+function displayReverseDialog(event) {
   event.preventDefault();
+  const name = document.getElementById('name').value;
+  let p = document.createElement('p');  
+  let responseDiv = document.getElementById('resBox');  
+  let code = parseInt(document.getElementById('code').value);
+  let reverseDialog = generateDialog(code).reverse();
 
+  reverseDialog.forEach(function (element) {
+    let span = document.createElement('span');
+    span.append(element);
+    p.append(span);
+  });
+  //p.append(generateDialog(code));
+  responseDiv.replaceChildren(p);
+}
+
+function displayDialog(event) {
+  event.preventDefault();
   const name = document.getElementById('name').value;
   let p = document.createElement('p');  
   let responseDiv = document.getElementById('resBox');  
@@ -86,6 +101,8 @@ function hideForm(event) {
 window.addEventListener('load', function() {
   const form = document.getElementById('form');
   const nameBtn = document.getElementById('nameBtn');
+  const revBtn = document.getElementById('reverse');
   nameBtn.addEventListener('click', hideForm);
+  revBtn.addEventListener('click', displayReverseDialog);
   form.addEventListener('submit', displayDialog);
 });
