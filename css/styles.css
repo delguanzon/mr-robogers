@@ -51,8 +51,10 @@ body {
   width: 1100px;
   display: inline;
   text-align: center;
-  margin-top: 100px;
   bottom: 0;
+  padding: 2px;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.699);
 }
 
 img {
@@ -87,11 +89,12 @@ button#nameBtn:hover {
   font-size: 150px;;
   cursor: pointer;
   transition: 0.3s;  
+  text-shadow: 0px 0px 20px yellow;
 }
 
 button#nameBtn:hover ~ label {
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 button#nameBtn:hover ~ input#name {
@@ -103,7 +106,6 @@ button#nameBtn:hover ~ input#name {
   transition: 1s;
 }
 
-
 span {
   transition: 1s;
   margin: 1%;
@@ -113,6 +115,10 @@ span:hover {
   transition: 0.1s;
   cursor: default;
   font-weight: bold;
+  font-size: 20px;
+}
+
+span#enter {
   font-size: 20px;
 }
 
@@ -144,7 +150,10 @@ input#name {
   text-align: center;
   caret-color: rgb(255, 255, 255);
   font-size: 20px;
+}
 
+input#name:focus {
+  border: none;
 }
 
 .whiteGlow {
