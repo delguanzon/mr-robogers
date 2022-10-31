@@ -2,13 +2,13 @@
 
 function translateCode(code) {  
     if(code === 1) {
-      return 'Beep';
+      return ' Beep';
     }
     if(code === 2) {
-      return 'Boop';
+      return ' Boop';
     }
     if(code === 3) {
-      return 'Won\'t you be my neighbor?';
+      return ' Won\'t you be my neighbor?';
     }
     return code;
   }
@@ -31,15 +31,17 @@ function generateDialog(number) {
   let dialog = [];
   for(i = 0; i <= number ; i++){
     if (i >= 200 ) {
-      dialog.push('*COUGH* *COUGH* *Static Noise*');
-      return dialog.join(' ');
+      dialog.push(' *COUGH* *COUGH* *Static Noise* ');
+      // return dialog.join(' ');
+      return dialog;
     } 
     if(i > 9) {
       dialog.push(translateCode(compareDigits(i)));
     }
     else dialog.push(translateCode(i));
   }
-  return dialog.join(' ');
+  // return dialog.join(' ');
+  return dialog;
 }
 
 
@@ -48,10 +50,17 @@ function generateDialog(number) {
 function displayDialog(event){
   event.preventDefault();
   let p = document.createElement("p");
+  
   let responseDiv = document.getElementById("resBox");  
   let code = parseInt(document.getElementById("code").value);
-  p.append(generateDialog(code));
-  responseDiv.replaceChildren(p);
+
+  generateDialog(code).forEach(function (element) {
+    let span = document.createElement("span");
+    span.append(element);
+    responseDiv.append(span);
+  });
+  //p.append(generateDialog(code));
+  //responseDiv.replaceChildren(p);
 };
 
 window.addEventListener("load", function() {
