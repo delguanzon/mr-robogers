@@ -9,10 +9,27 @@
   <link rel="stylesheet" href="./css/styles.css" type="text/css">
 </head>
 <body>
-  <form id="form">
-    <label for="code">Code</label>
-    <input type="number" id="code" autocomplete="off" placeholder="1234" max="999" required="true"><br>
-    <button type="submit" id="button">Enter</button>
-  </form>  
+
+  <div>
+    <form id="nameForm">
+      <label for="name">Hello! What's your name?</label><br>
+      <input type="input" id="name" autocomplete="off" required="true" />
+      <button type="submit" id="button">Enter</button>
+    </form>
+  </div>
+  <div>
+    <p>response</p>
+  </div>
+  <div>
+    <form id="form">
+      <button type="submit" id="button">Enter</button>
+      <label for="code">Code</label>
+      <input type="number" id="code" autocomplete="off" placeholder="Enter your code (i.e 123)" max="999" required="true"><br>      
+    </form> 
+  </div>
+  
+  
+  
+
 </body>
 </html>

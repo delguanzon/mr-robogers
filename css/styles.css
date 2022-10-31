@@ -1,15 +1,20 @@
+html {
+  height: 100%;
+}
 body {
-  background-color: rgb(0, 0, 0);
-  color: rgb(0, 255, 64);
+  background-color: rgb(255, 255, 255);
+  background: url("/img/bg.jpg") no-repeat bottom;
+  background-size: 1000px;
+  color: rgb(44, 44, 44);
   font-family: 'Courier New', Courier, monospace;
   display: flex;
-  flex-flow: row wrap;
   padding: 50px;
   padding-bottom: 5px;
-  caret-color: rgb(0, 255, 64);
+  caret-color: rgb(44, 44, 44);
   width: 1100px;
   margin: auto;
-  border: solid rgb(0, 255, 64);
+  min-height: 90%;
+  /* border: solid rgb(44, 44, 44); */
 }
 
 #footer {
@@ -19,73 +24,21 @@ body {
   margin-top: 100px;
   bottom: 0;
 }
+
 .form {
   width: 500px;
 }
 
-.field {
-  color: rgb(0, 255, 64);
-  background: black;
-  border: 1px solid rgb(0, 255, 64);
-}
-
-input[type="number"].field{
-  width: 40px;
-}
-
-input[type='radio'] {
-  position: absolute;
-  opacity: 00;
-}
-
-.select {
-  display: inline;  
-  padding-right: 5px;
-  float: left;
-  opacity: 0;
-}
-
-label:hover .select{
-  display: inline;
-  opacity: 100;
-}
-
-label:hover {
-  cursor: pointer;
-}
-
-input:checked~.select {
-  opacity: 100;
-}
-
-#ansDiv {
-  text-align: center;
-  margin: auto;
-}
 img {
   width: 200px
 }
 
-a {
-  color: rgb(0, 255, 64);
-  transition: 0.3s;
-  
-}
-a:visited {
-  color: rgb(0, 255, 64);
-}
-
-a:hover {
-  cursor: pointer;
-  font-size:large;
-  color: rgb(255, 255, 255);
-}
-
 button {
-  background-color: black;
-  border: solid rgb(0, 255, 64) 1px;
-  color: rgb(0, 255, 64);
+  background-color: rgb(255, 255, 255);
+  border: solid rgb(44, 44, 44) 1px;
+  color: rgb(44, 44, 44);
   margin-top: 10px;
+  transition: 0.3s;
 }
 
 button:hover {
