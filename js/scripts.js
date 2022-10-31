@@ -32,14 +32,14 @@ function generateDialog(number) {
   for(i = 0; i <= number ; i++){
     if (i >= 200 ) {
       dialog.push('*COUGH* *COUGH* *Static Noise*');
-      return dialog.join(', ');
+      return dialog.join(' ');
     } 
     if(i > 9) {
       dialog.push(translateCode(compareDigits(i)));
     }
     else dialog.push(translateCode(i));
   }
-  return dialog.join(', ');
+  return dialog.join(' ');
 }
 
 
