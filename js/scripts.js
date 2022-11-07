@@ -65,7 +65,7 @@ function displayDialog(event) {
     p.append(span);
   });
   responseDiv.replaceChildren(p);
-};
+}
 
 function hideForm(event) {
   event.preventDefault();
