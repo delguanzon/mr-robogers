@@ -28,17 +28,11 @@ function compareDigits(number) {
 function generateDialog(number) {
   let dialog = [];
   for(let i = 0; i <= number ; i++) {
-    if (i >= 200 ) {
-      dialog.push(' *COUGH* *COUGH* *Static Noise* ');
-      // return dialog.join(' ');
-      return dialog;
-    } 
     if(i > 9) {
       dialog.push(translateCode(compareDigits(i)));
     }
     else dialog.push(translateCode(i));
   }
-  // return dialog.join(' ');
   return dialog;
 }
 
@@ -56,7 +50,6 @@ function displayReverseDialog(event) {
     span.append(element);
     p.append(span);
   });
-  //p.append(generateDialog(code));
   responseDiv.replaceChildren(p);
 }
 
@@ -71,7 +64,6 @@ function displayDialog(event) {
     span.append(element);
     p.append(span);
   });
-  //p.append(generateDialog(code));
   responseDiv.replaceChildren(p);
 };
 
