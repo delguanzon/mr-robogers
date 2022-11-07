@@ -18,7 +18,6 @@ function translateCode(code) {
 }
 
 function compareDigits(number) {
-  const numbers = String(number).split('').map(Number);
   let numLookUp = String(number).match(/[1-3]/g);
   if (numLookUp) {
     return numLookUp.sort().map(Number)[numLookUp.length-1];
@@ -27,13 +26,8 @@ function compareDigits(number) {
 }
 
 function generateDialog(number) {
-  let timeOut = false;
-  setTimeout( function() {
-    timeOut = true;
-  }, 5000);
-
   let dialog = [];
-  for(i = 0; i <= number ; i++) {
+  for(let i = 0; i <= number ; i++) {
     if (i >= 200 ) {
       dialog.push(' *COUGH* *COUGH* *Static Noise* ');
       // return dialog.join(' ');
@@ -52,7 +46,6 @@ function generateDialog(number) {
 
 function displayReverseDialog(event) {
   event.preventDefault();
-  const name = document.getElementById('name').value;
   let p = document.createElement('p');  
   let responseDiv = document.getElementById('resBox');  
   let code = parseInt(document.getElementById('code').value);
@@ -69,7 +62,6 @@ function displayReverseDialog(event) {
 
 function displayDialog(event) {
   event.preventDefault();
-  const name = document.getElementById('name').value;
   let p = document.createElement('p');  
   let responseDiv = document.getElementById('resBox');  
   let code = parseInt(document.getElementById('code').value);
