@@ -36,18 +36,26 @@ A web application that takes a number from the user and returns a list of values
 
 Description: translateCode()
 
-Test: "It should return an array of numbers based counting from 0 up to the user's inputted number."
+Test: "It should return an array of numbers counting from 0 up to the user's inputted number."
 Code: translateCode(5);
 Expected Output:  [0,1,2,3,4,5]
 
-Test: "Replace number 1 with 'Beep!', number 2 with 'Boop!' and number 3 with 'Won't you be my neighbor?' in the resulting array"
+Test: "Replace number 1 with 'Beep! in the resulting array"
 Code: translateCode(5);
-Expected Output:  [0,'Beep!','Boop!', 'Won't you be my neighbor?', 3,4,5]
+Expected Output:  [0,'Beep!',2,3,4,5]
+
+Test: "Replace number number 2 with 'Boop!' in the resulting array"
+Code: translateCode(5);
+Expected Output:  [0,'Beep!','Boop!',3,4,5]
+
+Test: "Replace number 3 with 'Won't you be my neighbor?' in the resulting array"
+Code: translateCode(5);
+Expected Output:  [0,'Beep!','Boop!', 'Won't you be my neighbor?',4,5]
+
 
 Test: "It should display user's name after Won't you be my neighbor if available"
 Code: translateCode(5);
 Expected Output:  [0,'Beep!','Boop!', 'Won't you be my neighbor, firstName?', 3,4,5]
-
 
 
 Description: compareDigits()
@@ -68,14 +76,19 @@ Test: "It should look for the numbers 1,2 and 3 in the array of digits"
 Code: compareDigits(9123);
 Expected Output: [1,2,3];
 
-Test: "It should look for the numbers 1,2 and 3 in the array of digits"
-Code: compareDigits(9123);
-Expected Output: [1,2,3];
 
 Description: generateDialog()
-Test: "Displays dialog based on translated code"
-Code: generateDialog(5);
-Expected Output: "0, Beep!, Boop!, Won't you be my neighbor?, 4, 5"
+Test: Return an array of translated code
+Code: generateDialog(10);
+Expected Output: [0,'Beep','Boop','Won't you be my neighbor?',4,5,6,7,8,9,10];
+
+Test: Return an array of translated code, also translating for the numbers 1,2,3 found in multiple digits input.
+Code: generateDialog(10);
+Expected Output: [0,'Beep','Boop','Won't you be my neighbor?',4,5,6,7,8,9,'Beep'];
+
+Test: Return and array of translated code including multiple digit numbers considering that the highest number digit will always take priority in translation.
+Code: generateDialog(12);
+Expected Output: [0,'Beep','Boop', 'Won't you be my neighbor',4,5,6,7,8,9,'Beep','Beep','Boop']
 
 ```
 
